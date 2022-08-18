@@ -1,6 +1,6 @@
 # React Native TVMaze App
 
-This project is authored by CoffStack and has been provided for the React Native Testing Library study
+## This project is authored by [CoffStack](https://www.linkedin.com/company/coffstack/about/) and has been provided for the React Native Testing Library study
 
 This is a React Native App to show information about TV series. The data are fetch from [TVMaze API](https://www.tvmaze.com/api).
 
