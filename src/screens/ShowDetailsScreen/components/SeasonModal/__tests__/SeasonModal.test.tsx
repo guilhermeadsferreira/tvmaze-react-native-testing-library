@@ -1,51 +1,15 @@
-import React, {createRef} from 'react';
-import {Modalize} from 'react-native-modalize';
-import {act, fireEvent, render} from 'test-utils';
-
+import {render} from '@testing-library/react-native';
+import React from 'react';
 import {SeasonModal} from '../SeasonModal';
 
 describe('SeasonModal', () => {
-  test('show all season option', () => {
-    const modalizeRef = createRef<Modalize>();
-
-    const {getAllByText} = render(
+  test('should render the component', () => {
+    const {} = render(
       <SeasonModal
-        ref={modalizeRef}
+        seasons={['1', '2', '3']}
+        selectedSeason="1"
         onSelectSeason={season => console.log(season)}
-        selectedSeason="1"
-        seasons={['1', '2', '3']}
       />,
     );
-
-    act(() => {
-      modalizeRef.current?.open();
-    });
-
-    expect(getAllByText(/season/i).length).toBe(3);
-  });
-
-  test('call onSelectSeason with correct season when season option was pressed', () => {
-    const modalizeRef = createRef<Modalize>();
-
-    const onSelectSeasonMock = jest.fn();
-
-    const {getByText} = render(
-      <SeasonModal
-        ref={modalizeRef}
-        onSelectSeason={onSelectSeasonMock}
-        selectedSeason="1"
-        seasons={['1', '2', '3']}
-      />,
-    );
-
-    act(() => {
-      modalizeRef.current?.open();
-    });
-
-    const season2Element = getByText(/season 2/i);
-
-    fireEvent.press(season2Element);
-
-    expect(onSelectSeasonMock).toBeCalledWith('2');
   });
 });
