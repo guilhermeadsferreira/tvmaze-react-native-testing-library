@@ -12,6 +12,7 @@ const queryClient = new QueryClient({
     },
   },
 });
+
 const AllTheProviders: FC<{children: React.ReactNode}> = ({children}) => (
   <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
 );
