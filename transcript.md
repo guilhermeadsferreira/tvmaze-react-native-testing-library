@@ -61,6 +61,14 @@
 - Usar spyOn para espionar funções internas
 - Usar mockImplementation para dar um override em funções internas
 - Usar mockResolvedValue como sendo uma forma resumida do mockImplementation
-- Usuar mockResolvedValueOnce para realizar um mock uma única vez
+- Usar mockResolvedValueOnce para realizar um mock uma única vez
 - Usar beforeAll para realizar alguma ação no inicio da suit de test
 - Usar beforeEach para realizar alguma ação antes de cada test
+- Criar jestSetupFile
+- findByText
+- waitFor
+- Mockar React Navigation
+- Mockar React Query
+- Mockar uma lib de forma manual
+- ESLint
+- Lidar com atualizações
